@@ -18,3 +18,13 @@ for i in range(height):  # проходим по количеству строк
 # выводим матрицу в форматированном виде
 for row in matrix:  # проходим по каждой строке матрицы
     print('\t'.join(map(str, row)))  # преобразуем значения в строки и выводим с табуляцией
+def sum_3(matrix):
+    total_sum = 0
+    for row in matrix:
+        for values in row:
+            if values % 3 != 0:
+                total_sum += values
+    return total_sum
+total_sum = sum_3(matrix)
+text = "Сумма элементов, не кратных 3: "
+print(f"{text}{total_sum}")
